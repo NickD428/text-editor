@@ -10,23 +10,23 @@ module.exports = () => {
   return {
     mode: 'development',
     entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
+      main: './client/src/js/index.js', // Updated path
+      install: './client/src/js/install.js' // Updated path
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-      hot: "only",
+      hot: 'only',
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './index.html',
+        template: './client/index.html', // Updated path
         title: 'JATE'
       }),
       new InjectManifest({
-        swSrc: './src-sw.js',
+        swSrc: './client/src-sw.js', // Updated path
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
@@ -41,7 +41,7 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve('client/src/images/logo.png'), // Updated path
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
