@@ -8,7 +8,6 @@
     "start": "node server/server.js",
     "server": "nodemon server.js",
     "build": "webpack",
-    "install": "npm install",
     "client": "webpack --watch --config webpack.client.js"
   },
   "keywords": [],
