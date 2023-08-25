@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server/server.js",
-    "server": "nodemon server.js",
+    "server": "nodemon server/server.js",
     "build": "webpack",
     "client": "webpack --watch --config webpack.client.js"
   },
